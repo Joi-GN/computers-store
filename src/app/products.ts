@@ -3,7 +3,7 @@ export interface IProduct {
   imageURL: string,
   name: string,
   price: number,
-  soldOut: boolean,
+  stock: number,
   description: string
 }
 
@@ -13,7 +13,8 @@ export const products : IProduct[] = [
     imageURL: "https://placekitten.com/320/200",
     name: "Monitor 4K",
     price: 0.00,
-    soldOut: true,
+    stock: 0,
+
     description: "À vista no PIX",
   },
   {
@@ -21,7 +22,8 @@ export const products : IProduct[] = [
     imageURL: "https://placekitten.com/320/200",
     name: "Monitor 4K",
     price: 0.00,
-    soldOut: true,
+    stock: 0,
+
     description: "À vista no PIX",
   },
   {
@@ -29,7 +31,8 @@ export const products : IProduct[] = [
     imageURL: "https://placekitten.com/320/200",
     name: "Monitor 4K",
     price: 0.00,
-    soldOut: true,
+    stock: 0,
+
     description: "À vista no PIX",
   },
   {
@@ -37,7 +40,8 @@ export const products : IProduct[] = [
     imageURL: "https://placekitten.com/320/200",
     name: "Monitor 4K",
     price: 0.00,
-    soldOut: true,
+    stock: 0,
+
     description: "À vista no PIX",
   },
   {
@@ -45,7 +49,8 @@ export const products : IProduct[] = [
     imageURL: "https://placekitten.com/320/200",
     name: "Monitor 4K",
     price: 0.00,
-    soldOut: true,
+    stock: 0,
+
     description: "À vista no PIX",
   },
   {
@@ -53,7 +58,8 @@ export const products : IProduct[] = [
     imageURL: "https://placekitten.com/320/200",
     name: "Monitor 4K",
     price: 0.00,
-    soldOut: true,
+    stock: 0,
+
     description: "À vista no PIX",
   },
   {
@@ -61,7 +67,8 @@ export const products : IProduct[] = [
     imageURL: "https://placekitten.com/320/200",
     name: "Monitor 4K",
     price: 0.00,
-    soldOut: true,
+    stock: 0,
+
     description: "À vista no PIX",
   },
   {
@@ -69,7 +76,8 @@ export const products : IProduct[] = [
     imageURL: "https://placekitten.com/320/200",
     name: "Monitor 4K",
     price: 0.00,
-    soldOut: true,
+    stock: 0,
+
     description: "À vista no PIX",
   },
   {
@@ -77,7 +85,8 @@ export const products : IProduct[] = [
     imageURL: "https://placekitten.com/320/200",
     name: "Monitor 4K",
     price: 0.00,
-    soldOut: true,
+    stock: 0,
+
     description: "À vista no PIX",
   },
   {
@@ -85,7 +94,8 @@ export const products : IProduct[] = [
     imageURL: "https://placekitten.com/320/200",
     name: "Monitor 4K",
     price: 0.00,
-    soldOut: true,
+    stock: 0,
+
     description: "À vista no PIX",
   },
   {
@@ -93,7 +103,8 @@ export const products : IProduct[] = [
     imageURL: "https://placekitten.com/320/200",
     name: "Monitor 4K",
     price: 0.00,
-    soldOut: true,
+    stock: 0,
+
     description: "À vista no PIX",
   },
   {
@@ -101,7 +112,8 @@ export const products : IProduct[] = [
     imageURL: "https://placekitten.com/320/200",
     name: "Monitor 4K",
     price: 0.00,
-    soldOut: true,
+    stock: 0,
+
     description: "À vista no PIX",
   },
   {
@@ -109,7 +121,8 @@ export const products : IProduct[] = [
     imageURL: "https://placekitten.com/320/200",
     name: "Monitor 4K",
     price: 0.00,
-    soldOut: true,
+    stock: 0,
+
     description: "À vista no PIX",
   },
   {
@@ -117,7 +130,8 @@ export const products : IProduct[] = [
     imageURL: "https://placekitten.com/320/200",
     name: "Monitor 4K",
     price: 0.00,
-    soldOut: true,
+    stock: 0,
+
     description: "À vista no PIX",
   },
   {
@@ -125,7 +139,8 @@ export const products : IProduct[] = [
     imageURL: "https://placekitten.com/320/200",
     name: "Monitor 4K",
     price: 0.00,
-    soldOut: true,
+    stock: 0,
+
     description: "À vista no PIX",
   },
   {
@@ -133,7 +148,8 @@ export const products : IProduct[] = [
     imageURL: "https://placekitten.com/320/200",
     name: "Monitor 4K",
     price: 0.00,
-    soldOut: true,
+    stock: 0,
+
     description: "À vista no PIX",
   },
   {
@@ -141,7 +157,8 @@ export const products : IProduct[] = [
     imageURL: "https://placekitten.com/320/200",
     name: "Monitor 4K",
     price: 0.00,
-    soldOut: true,
+    stock: 0,
+
     description: "À vista no PIX",
   },
   {
@@ -149,7 +166,8 @@ export const products : IProduct[] = [
     imageURL: "https://placekitten.com/320/200",
     name: "Monitor 4K",
     price: 0.00,
-    soldOut: true,
+    stock: 0,
+
     description: "À vista no PIX",
   },
   {
@@ -157,7 +175,8 @@ export const products : IProduct[] = [
     imageURL: "https://placekitten.com/320/200",
     name: "Monitor 4K",
     price: 0.00,
-    soldOut: true,
+    stock: 0,
+
     description: "À vista no PIX",
   },
   {
@@ -165,7 +184,8 @@ export const products : IProduct[] = [
     imageURL: "https://placekitten.com/320/200",
     name: "Monitor 4K",
     price: 0.00,
-    soldOut: true,
+    stock: 0,
+
     description: "À vista no PIX",
   },
   {
@@ -173,7 +193,8 @@ export const products : IProduct[] = [
     imageURL: "https://placekitten.com/320/200",
     name: "Monitor 4K",
     price: 0.00,
-    soldOut: true,
+    stock: 0,
+
     description: "À vista no PIX",
   }
 ]
