@@ -10,6 +10,6 @@
       Quantidade: <input type="number" [(ngModel)]="productQuantity" min="1" [max]="product?.stock || null">
     </label>
     <p class="product__qtt" *ngIf="product?.stock == 0">Estoque disponível: {{product?.stock}}</p>
-    <button [disabled]="product?.stock == 0">Adicionar ao carrinho</button>
+    <button [disabled]="product?.stock == 0" (click)="addToCart()">Adicionar ao carrinho</button>
   </div>
 </section>

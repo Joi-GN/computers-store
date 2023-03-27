@@ -7,13 +7,17 @@ export interface IProduct {
   description: string
 }
 
+export interface ICartProduct extends IProduct {
+  quantity: number
+}
+
 export const products : IProduct[] = [
   {
     id: 1,
     imageURL: "https://placekitten.com/320/200",
     name: "Monitor 4K",
     price: 0.00,
-    stock: 0,
+    stock: 5,
 
     description: "À vista no PIX",
   },
