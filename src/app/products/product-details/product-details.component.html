@@ -1,0 +1,15 @@
+<section class="product__container">
+  <div class="product-image__container">
+    <img [src]="product?.imageURL" alt="">
+  </div>
+  <div class="product-details__container">
+    <h2 class="product__name">{{product?.name}}</h2>
+    <h3 class="product__price">{{product?.price | currency: "BRL"}}</h3>
+    <p class="product__availability" [textContent]="product?.stock == 0 ? 'Esgotado':'Estoque disponível'"></p>
+    <label>
+      Quantidade: <input type="number" [(ngModel)]="productQuantity" min="1" [max]="product?.stock || null">
+    </label>
+    <p class="product__qtt" *ngIf="product?.stock == 0">Estoque disponível: {{product?.stock}}</p>
+    <button [disabled]="product?.stock == 0">Adicionar ao carrinho</button>
+  </div>
+</section>
