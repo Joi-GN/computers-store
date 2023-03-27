@@ -5,14 +5,14 @@
   <div class="container-menu">
     <nav class="main-header__menu">
       <ul>
-        <li><a>Produtos</a></li>
+        <li><a routerLink="products">Produtos</a></li>
         <li>
-          <a>
+          <a routerLink="cart">
             Carrinho
             <span class="main-header__menu--cart">{{cartService.getCart().length}}</span>
           </a>
         </li>
-        <li><a>Contato</a></li>
+        <li><a routerLink="contact">Contato</a></li>
         <li><a>Instagram</a></li>
         <li><a>Facebook</a></li>
       </ul>

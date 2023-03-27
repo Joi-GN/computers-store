@@ -5,22 +5,31 @@ import { ICartProduct } from './products';
   providedIn: 'root'
 })
 export class CartService {
-  items: ICartProduct[] = [];
+  cartItems: ICartProduct[] = [];
 
   constructor() { }
 
   getCart(): ICartProduct[] {
-    this.items = JSON.parse(localStorage.getItem('cart') || '');
-    return this.items;
+    this.cartItems = JSON.parse(localStorage.getItem('cart') || '[]');
+    return this.cartItems;
   }
 
   addToCart(product: ICartProduct): void {
-    this.items.push(product);
-    localStorage.setItem('cart', JSON.stringify(this.items));
+    this.cartItems.push(product);
+    this.updateCart()
+  }
+
+  removeFromCart(productId: number): void {
+    this.cartItems = this.cartItems.filter(item => item.id !== productId) 
+    this.updateCart()
+  }
+
+  updateCart(): void {
+    localStorage.setItem('cart', JSON.stringify(this.cartItems));
   }
 
   clearCart(): void {
-    this.items = [];
+    this.cartItems = [];
     localStorage.clear();
   }
 }
