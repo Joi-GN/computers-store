@@ -15,17 +15,19 @@ export class CartService {
   }
 
   addToCart(product: ICartProduct): void {
-    this.cartItems.push(product);
-    this.updateCart()
+    let existingItem = this.cartItems.find(item => item.id == product.id)
+    if (existingItem) existingItem.quantity += product.quantity;
+    else this.cartItems.push(product);
+    this.updateCart(this.cartItems)
   }
 
   removeFromCart(productId: number): void {
     this.cartItems = this.cartItems.filter(item => item.id !== productId) 
-    this.updateCart()
+    this.updateCart(this.cartItems)
   }
 
-  updateCart(): void {
-    localStorage.setItem('cart', JSON.stringify(this.cartItems));
+  updateCart(cart: ICartProduct[]): void {
+    localStorage.setItem('cart', JSON.stringify(cart));
   }
 
   clearCart(): void {

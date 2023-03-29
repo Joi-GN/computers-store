@@ -26,6 +26,11 @@ export class CartComponent implements OnInit {
     this.total = this.cartItems.reduce((previous, current) => previous + (current.price * current.quantity), 0)
   }
 
+  updateCart(): void {
+    this.cartService.updateCart(this.cartItems);
+    this.calculateTotalPrice();
+  }
+
   removeFromCart(productId: number): void {
     this.cartService.removeFromCart(productId);
     this.cartItems = this.cartService.getCart();
