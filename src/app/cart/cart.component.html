@@ -1,17 +1,24 @@
-<h2>Carrinho</h2>
-<div *ngIf="cartItems.length > 0 else emptyCart">
-  <ul>
-    <li *ngFor="let item of cartItems">
-      <img [src]="item.imageURL" alt="">
-      <p>{{item.name}}</p>
-      <p>{{item.price | currency: "BRL"}}</p>
-      <label>
-        Qtd: <input type="number" [value]="item.quantity" (change)="calculateTotalPrice()">
-      </label>
-      <button (click)="removeFromCart(item.id)">X</button>
-    </li>
-  </ul>
-  <h3>Total: {{total | currency: "BRL"}}</h3>
-  <button class="" (click)="buy()">Confirmar compra</button>
-</div>
-<ng-template #emptyCart>Carrinho vazio</ng-template>
+<section class="container">
+  <h2 class="section-title">Carrinho</h2>
+  <div class="cart-container" *ngIf="cartItems.length > 0 else emptyCart">
+    <ul class="cart">
+      <li class="cart-item" *ngFor="let item of cartItems">
+        <img class="cart-item__image" [src]="item.imageURL" alt="">
+        <p class="cart-item__name">{{item.name}}</p>
+        <p class="cart-item__price">{{item.price | currency: "BRL"}}</p>
+        <label class="cart-item__amount">
+          Qtd: <input type="number" [max]="item.stock" [(ngModel)]="item.quantity" (change)="updateCart()">
+        </label>
+        <button class="cart-item__remove-button" (click)="removeFromCart(item.id)">❌</button>
+      </li>
+    </ul>
+    <h3 class="total">Total: {{total | currency: "BRL"}}</h3>
+    <button class="buy-button" (click)="buy()">Confirmar compra</button>
+  </div>
+  <ng-template #emptyCart>
+    <div class="empty-cart">
+      <h3 class="empty-cart__title">Carrinho Vazio</h3>
+      <p class="empty-cart__tip">Navegue pelos produtos e adicione os produtos desejados no carrinho para poder comprar!</p>
+    </div>
+  </ng-template>
+</section>

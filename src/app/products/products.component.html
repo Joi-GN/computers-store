@@ -1,12 +1,17 @@
-<section class="product-list">
-  <div class="product-list__card" *ngFor="let product of products">
-    <a routerLink="/products/{{product.id}}" class="product-list__link">
-      <img [src]="product.imageURL" alt="">
-      <h2 class="product-item__name">{{product.name}}</h2>
-      <p class="product-item__price">{{product.price | currency: "BRL"}}</p>
-      <span *ngIf="product.stock == 0">Esgotado</span>
-      <p class="product-item__price-description">{{product.description}}</p>
-      <button class="product-item__buy-button" [disabled]="product.stock == 0">Adicionar ao carrinho</button>
-    </a>
-  </div>
+<section class="container">
+  <h2 class="section__title">Produtos</h2>
+  <ul class="product-list">
+    <li class="product-list__card" *ngFor="let product of products">
+      <a routerLink="/products/{{product.id}}" class="product-list__card__link">
+        <img class="product-item__image" [src]="product.imageURL" alt="">
+        <h3 class="product-item__name">{{product.name}}</h3>
+        <p class="product-item__price">
+          {{product.price | currency: "BRL"}} 
+          <span class="product-item__stock" *ngIf="product.stock == 0">Esgotado</span>
+        </p>
+        <p class="product-item__price-description">{{product.description}}</p>
+        <button class="product-item__buy-button" [disabled]="product.stock == 0">Adicionar ao carrinho</button>
+      </a>
+    </li>
+  </ul>
 </section>
