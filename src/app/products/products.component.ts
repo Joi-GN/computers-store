@@ -10,6 +10,7 @@ import { ProductsService } from '../products.service';
 })
 export class ProductsComponent implements OnInit {
   products : IProduct[] | undefined;
+  productsFound: boolean = true;
 
   constructor (
     private productsService : ProductsService,
@@ -23,8 +24,10 @@ export class ProductsComponent implements OnInit {
 
       if (name) {
         this.products = this.products.filter(product => product.name.toLowerCase().includes(name))
+        if (this.products.length == 0) this.productsFound = false;
       } else {
         this.products = this.productsService.getAll();
+        this.productsFound = true;
       }
     })
 

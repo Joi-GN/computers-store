@@ -1,6 +1,6 @@
 <section class="container">
   <h2 class="section__title">Produtos</h2>
-  <ul class="product-list">
+  <ul class="product-list" *ngIf="productsFound else noProductsFound">
     <li class="product-list__card" *ngFor="let product of products">
       <a routerLink="/products/{{product.id}}" class="product-list__card__link">
         <img class="product-item__image" [src]="product.imageURL" alt="">
@@ -14,4 +14,9 @@
       </a>
     </li>
   </ul>
+  <ng-template #noProductsFound>
+    <div class="no-products-found">
+      <h3 class="no-products-found__title">Nenhum produto encontrado</h3>
+    </div>
+  </ng-template>
 </section>

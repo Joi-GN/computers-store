@@ -1,7 +1,6 @@
 .product-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   gap: 1.5rem;
 }
 
@@ -51,26 +50,39 @@
   font-weight: bold;
 }
 
+.no-products-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 60vh;
+  text-align: center;
+}
+
+.no-products-found__title {
+  color: var(--brand-color-1);
+  font-weight: bold;
+}
+
 @media screen and (min-width: 0) {  
   .product-list__card {
-    width: calc(50% - 1.5rem);
+    width: calc(50% - .75rem);
   }
 }
 
 @media screen and (min-width: 768px) {
   .product-list__card {
-    width: calc(33.3% - 1.5rem);
+    width: calc(33.3% - 1rem);
   }
 }
 
 @media screen and (min-width: 1024px) {
   .product-list__card {
-    width: calc(25% - 1.5rem);
+    width: calc(25% - 1.13rem);
   }
 }
 
 @media screen and (min-width: 1440px) {
   .product-list__card {
-    width: calc(20% - 1.5rem);
+    width: calc(20% - 1.2rem);
   }
 }
