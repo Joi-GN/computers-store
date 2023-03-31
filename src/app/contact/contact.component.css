@@ -6,7 +6,7 @@
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: .5rem;
 }
 
 .contact-form input,
@@ -19,7 +19,7 @@
   font-family: inherit;
 }
 
-.invalid {
+.contact-form input.invalid {
   border: 1px solid var(--invalid);
 }
 
@@ -36,18 +36,21 @@
   margin-top: 1rem;
 }
 
+.contact-address__iframe {
+  width: 100%;
+}
 
 @media screen and (min-width: 0) {
   .contact-container {
     flex-direction: column;
   }
-
+  
   .contact-address {
     width: 100%;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .contact-container {
     flex-direction: row;
     justify-content: space-between;
@@ -58,14 +61,6 @@
   }
 
   .contact-address {
-    width: 40%;
+    width: 50%;
   }
-}
-
-@media screen and (min-width: 1024px) {
-
-}
-
-@media screen and (min-width: 1440px) {
-
 }
