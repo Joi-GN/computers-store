@@ -1,0 +1,7 @@
+.main-header__search-form {
+  display: flex;
+}
+
+.main-header__search-form button {
+  background-color: var(--brand-color-1);
+}

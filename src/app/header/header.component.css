@@ -36,10 +36,6 @@
   padding: .25rem;
 }
 
-.main-header__search-form {
-  display: flex;
-}
-
 @media screen and (min-width: 0) {
   .main-header, .container-menu {
     flex-direction: column;
