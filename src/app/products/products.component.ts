@@ -25,6 +25,7 @@ export class ProductsComponent implements OnInit {
       if (productName) {
         this.products = this.products.filter(product => product.name.toLowerCase().includes(productName))
         if (this.products.length == 0) this.productsFound = false;
+        else this.productsFound = true;
       } else {
         this.products = this.productsService.getAll();
         this.productsFound = true;
