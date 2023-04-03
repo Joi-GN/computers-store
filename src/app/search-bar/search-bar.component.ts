@@ -13,7 +13,7 @@ export class SearchBarComponent {
 
   search(): void {
     if(this.input) {
-      this.router.navigate(["products"], { queryParams: { name: this.input }});
+      this.router.navigate(["products"], { queryParams: { productName: this.input }});
     } else {
       this.router.navigate([""])
     }

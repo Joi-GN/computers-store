@@ -19,11 +19,11 @@ export class ProductsComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.queryParamMap.subscribe(param => {
-      const name = param.get("name")?.toLowerCase();
+      const productName = param.get("productName")?.toLowerCase();
       this.products = this.productsService.getAll();
 
-      if (name) {
-        this.products = this.products.filter(product => product.name.toLowerCase().includes(name))
+      if (productName) {
+        this.products = this.products.filter(product => product.name.toLowerCase().includes(productName))
         if (this.products.length == 0) this.productsFound = false;
       } else {
         this.products = this.productsService.getAll();
