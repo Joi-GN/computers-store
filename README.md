@@ -11,11 +11,18 @@
 
 ## 📝️ Descrição
 
-Site E-commerce desenvolvido com Angular.
+O projeto é um Site E-commerce fictício do tipo Single Page Application desenvolvido com Angular.  
+> O site é composto por: 
+>- Página com a lista de produtos;
+>- Página com os detalhes do produto selecionado;
+>- Página para contato;
+>- Página do carrinho com os itens adicionados;
+>- Funcionalidade de busca de produtos pelo nome;
+>> Responsivo para várias telas 📱
 
 ## 🖥️ Demonstração
 
-![Captura de tela do Projeto]()
+<img src="https://raw.githubusercontent.com/Joi-GN/my-portfolio/main/assets/img/projects/computers-store.png" width="550px" alt="Captura de tela do projeto">
 
 ## 🖱️ Como Acessar
 
