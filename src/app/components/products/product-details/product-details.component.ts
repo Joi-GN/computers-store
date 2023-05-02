@@ -1,9 +1,9 @@
 import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
-import { CartService } from 'src/app/cart.service';
-import { NotificationService } from 'src/app/notification.service';
-import { ICartProduct, IProduct } from 'src/app/products';
-import { ProductsService } from 'src/app/products.service';
+import { CartService } from 'src/app/services/cart.service';
+import { NotificationService } from 'src/app/services/notification.service';
+import { ICartProduct, IProduct } from 'src/app/models/products';
+import { ProductsService } from 'src/app/services/products.service';
 
 @Component({
   selector: 'app-product-details',
